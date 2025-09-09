@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Layout</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .navbar {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 10rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        box-sizing: border-box;
+      }
+      a {
+        color: white;
+        font-size: large;
+        text-decoration-line: none;
+      }
+      .gallary {
+        display: grid;
+        /*grid-template: 
+            "header header" 
+            "sidemenu main" 
+            "footer footer";
+            */
+        grid-template-columns: 100fr;
+        grid-template-rows: repeat(9, 100fr);
+        border: 3px solid gray;
+        justify-items: stretch;
+        height: 100%;
+      }
+      img{
+        border-radius: 0.3rem;
+        margin: 0.5rem;
+      }
+      @media screen and (min-width: 768px) {
+        .navbar {
+          flex-direction: row;
+          justify-content: end;
+          height: 5rem;
+          padding-top: 0;
+          padding-bottom: 0;
+          padding-right: 0.5rem;
+        }
+        a {
+          margin: 0.5rem;
+        }
+        .gallary {
+          grid-template-columns: repeat(2, 50fr);
+          grid-template-rows: repeat(5, 12.25fr);
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .gallary {
+          grid-template-columns: repeat(3, 33.3fr);
+          grid-template-rows: repeat(4, 25fr);
+         
+        }
+        img:nth-child(2) {
+             grid-row: 1/ span 2;
+             grid-column: 2/ span 2;
+        }
+       
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="">About</a>
+      <a href="">Courses</a>
+      <a href="">Forum</a>
+      <a href="">Learning Paths</a>
+      <a href="">Contact</a>
+    </nav>
+    <div class="gallary">
+      <img
+        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=230&h=200&fit=crop"
+        alt="Food 1"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=230&h=200&fit=crop"
+        alt="Food 2"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=230&h=200&fit=crop"
+        alt="Food 3"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=230&h=200&fit=crop"
+        alt="Food 4"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=230&h=200&fit=crop"
+        alt="Food 5"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=230&h=200&fit=crop"
+        alt="Food 6"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=230&h=200&fit=crop"
+        alt="Food 7"
+      />
+       <img
+        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=230&h=200&fit=crop"
+        alt="Food 9"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=230&h=200&fit=crop"
+        alt="Food 10"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=230&h=200&fit=crop"
+        alt="Food 11"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=230&h=200&fit=crop"
+        alt="Food 12"
+      />
+    </div>
+  </body>
+</html>
