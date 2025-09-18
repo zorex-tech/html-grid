@@ -19,11 +19,6 @@
       }
       .gallary {
         display: grid;
-        /*grid-template: 
-            "header header" 
-            "sidemenu main" 
-            "footer footer";
-            */
         grid-template-columns: 100fr;
         grid-template-rows: repeat(9, 100fr);
         border: 3px solid gray;
