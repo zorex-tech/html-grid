@@ -17,6 +17,10 @@
         font-size: large;
         text-decoration-line: none;
       }
+      .main-div{
+        height: 100vh;
+        max-width: 100vw;
+      }
       .gallary {
         display: grid;
         grid-template-columns: 100fr;
@@ -24,6 +28,7 @@
         border: 3px solid gray;
         justify-items: stretch;
         height: 100%;
+        overflow: scroll;
       }
       img{
         border-radius: 0.3rem;
